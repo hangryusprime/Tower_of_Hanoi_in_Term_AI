@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 import sys
 from flask import app, jsonify, Flask
-
+from hanoi import *
+from settings import who, ai, log, web, delay, amount
 app = Flask(__name__)
-game = None
+game = Game(who=who, ai=ai, log=log, delay=delay, web=web, amount=amount)
 
 
 
